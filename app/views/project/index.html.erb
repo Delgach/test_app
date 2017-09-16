@@ -1,0 +1,28 @@
+<h1>Задачи</h1>
+
+<%@projects.each do |p| %>
+<ul>
+	<h2><%=p.title%></h2><br>
+	<%p.todos.each do |t|%>
+	<li>
+		<%=t.text%> <br>
+		</li>
+	<%end%> 
+</ul>
+<%end%>
+
+<%= form_for :todo, url: create_todo_path, method: :get do |f| %>
+  <%= f.text_field :text %>
+  
+
+<%= f.select(:project_id) do %>
+  <% @projects.each do |p| -%>
+    <%= content_tag(:option, p.title, value: p.id) %>
+  <% end %>
+<% end %>
+
+<%= f.submit "Create" %>
+
+<% end %>
+
+
