@@ -15,8 +15,8 @@
   <%= f.text_field :text %>
   
 
-<%= f.select(:project_id) do %>
-  <% @projects.each do |p| -%>
+<%= f.select :project_id do %>
+  <% @projects.each do |p| %>
     <%= content_tag(:option, p.title, value: p.id) %>
   <% end %>
 <% end %>
