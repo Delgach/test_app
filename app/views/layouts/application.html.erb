@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<link href="something/app/assets/stylesheets/blue.scss" rel="stylesheet">
+<script src="something/app/assets/javascripts/icheck.js"></script>
   <head>
     <title>TestApp</title>
     <%= csrf_meta_tags %>
@@ -9,6 +11,13 @@
   </head>
 
   <body>
+  	<header>
+  		<nav class="be-blue white large-padding">
+  			<ul class="no-list row center-xs">
+  				Задачи
+  			</ul>
+  		</nav>
+  	</header>
     <%= yield %>
   </body>
 </html>

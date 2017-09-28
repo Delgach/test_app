@@ -12,11 +12,10 @@
 //
 //= require rails-ujs
 //= require jquery
+
 //= require_tree .
 $(document).ready(function(){
-	
-	
-	
-	
-	alert("ok")
+
+		
+
 })
